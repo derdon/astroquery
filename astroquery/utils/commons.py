@@ -436,7 +436,6 @@ class FileContainer(object):
         Return the file as an io.StringIO object
         """
         s = self.get_string()
-        # TODO: replace with six.BytesIO
         try:
             return six.BytesIO(s)
         except TypeError:
